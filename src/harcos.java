@@ -1,5 +1,5 @@
 
-public abstract class  harcos {
+public abstract class  Harcos {
 	
 	protected int level;
 	protected int minSebzes;
@@ -48,7 +48,7 @@ public abstract class  harcos {
 	
 	boolean generatHit() {
 		int min=1;
-		int max=10;
+		int max=100;
 		int szam = (int)(Math.random() * (max - min + 1) + min);
 		if(szam<=hitChance) 
 			return  true;	
