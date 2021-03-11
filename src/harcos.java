@@ -1,11 +1,12 @@
 
-public abstract class  Harcos {
+public abstract class  Harcos { //Fõosztály
 	
 	protected int level;
 	protected int minSebzes;
 	protected int maxSebzes;
 	protected int elet;
-	protected int hitChance; 
+	protected int hitChance;
+	protected int xpValue;
 	
 	public int getMinSebzes() {
 		return minSebzes;
@@ -46,7 +47,7 @@ public abstract class  Harcos {
 	
 	//Hit generálás hitchancebõl
 	
-	boolean generatHit() {
+	boolean isHit() {
 		int min=1;
 		int max=100;
 		int szam = (int)(Math.random() * (max - min + 1) + min);
@@ -60,8 +61,7 @@ public abstract class  Harcos {
 	//tostring
 	
 	public String toString() {
-		return "Level: "+ "Sebzes range: " + this.minSebzes + "-" + this.maxSebzes+ " aktual sebzes :"+ generateSebzes()+", elet: "+this.elet +
-				"sikerült az ütés: " + generatHit();
+		return " sebzes range: " + this.minSebzes + "-" + this.maxSebzes + ", elet: "+this.elet;
 	}
 	
 }
