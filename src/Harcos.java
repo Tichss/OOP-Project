@@ -39,13 +39,13 @@ public abstract class  Harcos { //Fıoszt·ly
 		this.hitChance = hitChance;
 	}
 	
-	//Sebzes generalas maxbol & minbıl
+	//Sebzes generalas maxbol & minb√µl
 
 	int generateSebzes() {
 		return (int)(Math.random() * (this.maxSebzes - this.minSebzes + 1) + this.minSebzes);
 	}
 	
-	//Hit gener·l·s hitchancebıl
+	//Hit gener√°l√°s hitchanceb√µl
 	
 	boolean isHit() {
 		int min=1;
@@ -61,7 +61,12 @@ public abstract class  Harcos { //Fıoszt·ly
 	//tostring
 	
 	public String toString() {
+<<<<<<< HEAD:src/harcos.java
 		return " sebzes range: " + this.minSebzes + "-" + this.maxSebzes + ", elet: "+this.elet;
+=======
+		return "Level: "+ "Sebzes range: " + this.minSebzes + "-" + this.maxSebzes+ " aktual sebzes :"+ generateSebzes()+", elet: "+this.elet +
+				"siker√ºlt az √ºt√©s: " + generatHit();
+>>>>>>> 69bc99990e78ef4fbb266f1b2376a586e7cca25b:src/Harcos.java
 	}
 	
 }
