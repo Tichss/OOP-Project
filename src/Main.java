@@ -23,22 +23,79 @@ public class Main {
 		
 
 	}
+	
+	public static void fightTillTheEnd(Player p1, Harcos h1) {
+		int szam = Methods.rdm(0,1);
+		if (szam==0) {
+			do {
+				p1.tamad(h1);
+				h1.tamad(p1);
+			}while(p1.isAlive() && h1.isAlive());
+		}else{
+			do {
+				h1.tamad(p1);
+				p1.tamad(h1);
+			}while(p1.isAlive() && h1.isAlive());
+		}
+		
+		if(p1.isAlive()) {
+			p1.setXp(h1.getXp());
+			p1.regen();
+			System.out.println("Gyõztél");
+		}else {
+			System.out.println("Vesztettél");
+		}
+	}
+	
+	public static Harcos generateHarcos(int p1level) {
+		int szam=Methods.rdm(0, 2);
+		int level=Methods.rdm(p1level, p1level+1);
+		if(szam==0)
+			return new Tank(level);	
+		else if (szam==1)
+			return new Magus(level);
+		else
+			return new Orgyilkos(level);
+	}
+	
+	public static Harcos chooseHarcos(Player p1) {
+		System.out.println("Válassz enemyt: ");
+		Harcos h1 = generateHarcos(p1.getLevel());
+		System.out.println("1." + h1 );
+		Harcos h2 = generateHarcos(p1.getLevel());
+		System.out.println("2." + h2);
+		Harcos h3 = generateHarcos(p1.getLevel());
+		System.out.println("3." + h3);
+		Harcos h4 = generateHarcos(p1.getLevel());
+		System.out.println("4." + h4);
+		Scanner sc = new Scanner(System.in);
+		if(sc.nextInt()==1) {
+			return h1;
+		}else {
+			return h2;
+		}
+	}
+	
 
+	
 	public static void main(String[] args) {
 		
-		Player p1 = new Player();
-		setNameSetCast(p1);
+		//EZ KELL
+		//Player p1 = new Player();
+		//setNameSetCast(p1);
+		
+		Player p1 = new Player("Magus","Berci"); //EZ MAJD DhpE
 		System.out.println(p1);
-
-
-//		Tank t1= new Tank(1);
-//		System.out.println(t1);
-//		Magus m1 = new Magus(1);
-//		Magus m2 = new Magus(1);
-//		Magus m3 = new Magus(1);
-//		System.out.println(m1);
-//		System.out.println(m2);
-//		System.out.println(m3);
+		
+		for (int i=0; i<1; i++) {
+			if(p1.isAlive()==false) break;
+			fightTillTheEnd(p1,chooseHarcos(p1));
+			//System.out.println(p1);
+		}
+		Boss b1 = new Boss();
+		System.out.println(b1);
+		fightTillTheEnd(p1,b1);
+		
 	}
 
 }

@@ -1,6 +1,6 @@
 public class Magus extends Harcos{
 	
-	static String[] names= {"asd","qwe","tre"};
+	static String[] names= {"Harry Potter", "Voldemort", "Gandalf", "Medivh", "Khadgar", "Scarlet Witch", "Demona", "Goethius Salmander", "Gellert Grindelwald"};
 	
 	//seged statcicek
 	static int volteNameCount=0; 
@@ -13,78 +13,80 @@ public class Magus extends Harcos{
     
     Magus(int level){
     	
+    	this.cast="Magus";
+    	
         switch (level){
         case 1:
         	this.name=setName();
             this.level=1;
-            this.minSebzes=2;
-            this.maxSebzes=4;
-            this.elet=8;
+            this.minDamage=2;
+            this.maxDamage=4;
+            this.hp=8;
             this.hitChance=60;
-            this.xpValue=30;
+            this.xp=30;
             break;
         case 2:
         	this.name=setName();
             this.level=2;
-            this.minSebzes=2;
-            this.maxSebzes=4;
-            this.elet=10;
+            this.minDamage=2;
+            this.maxDamage=4;
+            this.hp=10;
             this.hitChance=60;
             break;
         case 3:
         	this.name=setName();
             this.level=3;
-            this.minSebzes=3;
-            this.maxSebzes=5;
-            this.elet=13;
+            this.minDamage=3;
+            this.maxDamage=5;
+            this.hp=13;
             this.hitChance=60;
             break;
         case 4:
         	this.name=setName();
             this.level=4;
-            this.minSebzes=3;
-            this.maxSebzes=6;
-            this.elet=15;
+            this.minDamage=3;
+            this.maxDamage=6;
+            this.hp=15;
             this.hitChance=60;
             break;
         case 5:
         	this.name=setName();
             this.level=5;
-            this.minSebzes=4;
-            this.maxSebzes=6;
-            this.elet=18;
+            this.minDamage=4;
+            this.maxDamage=6;
+            this.hp=18;
             this.hitChance=60;
             break;
         case 6:
         	this.name=setName();
             this.level=6;
-            this.minSebzes=4;
-            this.maxSebzes=6;
-            this.elet=20;
+            this.minDamage=4;
+            this.maxDamage=6;
+            this.hp=20;
             this.hitChance=55;
             break;
         case 7:
         	this.name=setName();
             this.level=7;
-            this.minSebzes=5;
-            this.maxSebzes=7;
-            this.elet=23;
+            this.minDamage=5;
+            this.maxDamage=7;
+            this.hp=23;
             this.hitChance=50;
             break;
         case 8:
         	this.name=setName();
             this.level=8;
-            this.minSebzes=6;
-            this.maxSebzes=7;
-            this.elet=25;
+            this.minDamage=6;
+            this.maxDamage=7;
+            this.hp=25;
             this.hitChance=55;
             break;
         case 9:
         	this.name=setName();
             this.level=9;
-            this.minSebzes=8;
-            this.maxSebzes=8;
-            this.elet=30;
+            this.minDamage=8;
+            this.maxDamage=8;
+            this.hp=30;
             this.hitChance=50;
             break;
         }
@@ -108,7 +110,7 @@ public class Magus extends Harcos{
     }
     
     public String toString(){
-    	return "level: "+ level + super.toString() + " neve: "+ name;
+    	return super.toString() + " neve: "+ name;
     }
 
 }

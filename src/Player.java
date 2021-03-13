@@ -1,9 +1,8 @@
 
 public class Player extends Harcos{
 	
+	private int maxHp;
 	private String name;
-	private String cast;
-	private int xp;
 	
 
 	Player(){}
@@ -11,65 +10,68 @@ public class Player extends Harcos{
 		
 		this.name=name;
 		setCast(cast);
-		this.xp=0;	
+		this.xp=0;
+		this.gold=300;
 	}
 	
 	
 	
 	//SETTER GETTER
 	
-    public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getCast() {
-		return cast;
-	}
+	
+	
+    public String getName() {return name;}
+	public void setName(String name) {this.name = name;}
+	
+	public String getCast() {return cast;}
 	public void setCast(String cast) {
+		
 		this.cast = cast;
+		this.level=1;
         switch (cast){
         
         case "Tank":
-            this.level=1;
-            this.minSebzes=2;
-            this.maxSebzes=4;
-            this.elet=10;
+            this.minDamage=2;
+            this.maxDamage=4;
+            this.maxHp=10;
             this.hitChance=60;
             break;
             
         case "Magus":;
-            this.level=1;
-            this.minSebzes=2;
-            this.maxSebzes=4;
-            this.elet=8;
+            this.minDamage=2;
+            this.maxDamage=4;
+            this.maxHp=8;
             this.hitChance=60;
             break;
 
         case "Orgyilkos":
-            this.level=1;
-            this.minSebzes=3;
-            this.maxSebzes=5;
-            this.elet=13;
+            this.minDamage=3;
+            this.maxDamage=5;
+            this.maxHp=13;
             this.hitChance=60;
             break;
         }
+        
+        this.hp=this.maxHp;
 		
 	}
-	public int getXp() {
-		return xp;
+	
+	public int getXp() {return xp;}
+	public void setXp(int xp) {this.xp = xp;}
+	
+	public int getMaxHp() {return maxHp;}
+	public void setMaxHp(int maxHp) {this.maxHp = maxHp;}
+	
+	
+	//OTHER METHODS
+	
+	public void regen() {
+		this.hp=this.maxHp;
 	}
-	public void setXp(int xp) {
-		this.xp = xp;
-	}
-	
-	
-	
-	
-	
 	
 	public String toString() {
-    	return "nevem: "+ this.name + " castom: " + this.cast + super.toString();
+    	return "nevem: "+ this.name +" " + super.toString() + " XP: " + this.xp;
     }
+	
+	
 }

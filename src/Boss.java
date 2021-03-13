@@ -1,12 +1,12 @@
 
 public class Boss extends Harcos{
 
-    Boss(){}
-    Boss(int level){
+    Boss(){
+    		this.cast="Veigar";
             this.level=10;
-            this.minSebzes=12;
-            this.maxSebzes=15;
-            this.elet=50;
-            this.hitChance=50;
+            this.minDamage=12;
+            this.maxDamage=15;
+            this.hp=50;
+            this.hitChance=100;
     }
 }

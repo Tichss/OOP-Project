@@ -1,72 +1,70 @@
 
-public abstract class  Harcos { //Fıoszt·ly
+public class  Harcos { //Fıoszt·ly
 	
+	protected String cast;
 	protected int level;
-	protected int minSebzes;
-	protected int maxSebzes;
-	protected int elet;
+	protected int minDamage; 
+	protected int maxDamage;
+	protected int hp;
 	protected int hitChance;
-	protected int xpValue;
+	protected int xp;
+	protected int gold;
 	
-	public int getMinSebzes() {
-		return minSebzes;
-	}
-
-	public void setMinSebzes(int minSebzes) {
-		this.minSebzes = minSebzes;
-	}
-
-	public int getMaxSebzes() {
-		return maxSebzes;
-	}
-
-	public void setMaxSebzes(int maxSebzes) {
-		this.maxSebzes = maxSebzes;
-	}
-
-	public int getElet() {
-		return elet;
-	}
-	public void setElet(int elet) {
-		this.elet = elet;
-	}
 	
-	public int getHitChance() {
-		return hitChance;
-	}
-
-	public void setHitChance(int hitChance) {
-		this.hitChance = hitChance;
-	}
+	//GETTER SETTER
 	
-	//Sebzes generalas maxbol & minb√µl
+	public int getLevel() { return level;}
+	public void setLevel(int level) {this.level = level;}
 
-	int generateSebzes() {
-		return (int)(Math.random() * (this.maxSebzes - this.minSebzes + 1) + this.minSebzes);
+	public int getMinDamage() {return minDamage;}
+	public void setMinDamage(int minDamage) {this.minDamage = minDamage;}
+
+	public int getMaxDamage() {return maxDamage;}
+	public void setMaxDamage(int maxDamage) {this.maxDamage = maxDamage;}
+
+	public int getHp() {return hp;}
+	public void setHp(int hp) {this.hp = hp;}
+	
+	public int getHitChance() {return hitChance;}
+	public void setHitChance(int hitChance) {this.hitChance = hitChance;}
+	
+	public int getXp() {return xp;}
+	public void setXp(int xp) {this.xp = xp;}
+	
+	public int getGold() {return gold;}
+	public void setGold(int gold) {this.gold = gold;}
+	
+	
+	//OTHER METHODS
+	public int generateSebzes() {
+		return (int)(Math.random() * (this.maxDamage - this.minDamage + 1) + this.minDamage);
 	}
 	
-	//Hit gener√°l√°s hitchanceb√µl
-	
-	boolean isHit() {
-		int min=1;
-		int max=100;
-		int szam = (int)(Math.random() * (max - min + 1) + min);
-		if(szam<=hitChance) 
+	public boolean isHit() {
+		int szam = Methods.rdm(1,100);
+		if(szam<=this.hitChance) 
 			return  true;	
 		else
 			return false;		
 	}
-
 	
-	//tostring
+	public boolean isAlive() {
+		if (this.hp>0)
+			return true;
+		else
+			return false;
+	}
 	
+	public void tamad(Harcos h1){
+		if(this.isAlive() && this.isHit()) {
+			h1.setHp(h1.getHp()-this.generateSebzes());
+		}
+	}
+	
+	
+	//toString
 	public String toString() {
-<<<<<<< HEAD:src/harcos.java
-		return " sebzes range: " + this.minSebzes + "-" + this.maxSebzes + ", elet: "+this.elet;
-=======
-		return "Level: "+ "Sebzes range: " + this.minSebzes + "-" + this.maxSebzes+ " aktual sebzes :"+ generateSebzes()+", elet: "+this.elet +
-				"siker√ºlt az √ºt√©s: " + generatHit();
->>>>>>> 69bc99990e78ef4fbb266f1b2376a586e7cca25b:src/Harcos.java
+		return "Cast: " +this.cast + " Attack: " + this.minDamage + "-" + this.maxDamage + ", HP: "+this.hp +", Level: " + this.level;
 	}
 	
 }
