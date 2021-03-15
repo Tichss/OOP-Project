@@ -12,6 +12,8 @@ public class Orgyilkos extends Harcos{
             this.maxDamage=5;
             this.hp=6;
             this.hitChance=50;
+            this.xp=30;
+            this.gold=30;
             break;
         case 2:
             this.level=2;
@@ -19,6 +21,8 @@ public class Orgyilkos extends Harcos{
             this.maxDamage=5;
             this.hp=8;
             this.hitChance=50;
+            this.xp=30;
+            this.gold=30;
             break;
         case 3:
             this.level=3;

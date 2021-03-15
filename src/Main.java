@@ -39,11 +39,15 @@ public class Main {
 		}
 		
 		if(p1.isAlive()) {
-			p1.setXp(h1.getXp());
+			p1.setGold(p1.getGold()+h1.getGold());
+			p1.setXp(p1.getXp()+h1.getXp());
+			p1.setLevel(p1.getXp());
+			p1.levelUP();
 			p1.regen();
 			System.out.println("Gyõztél");
 		}else {
 			System.out.println("Vesztettél");
+			System.out.println("Ennyit sikerült összeszedni: " +p1.getXp());
 		}
 	}
 	
@@ -69,11 +73,27 @@ public class Main {
 		Harcos h4 = generateHarcos(p1.getLevel());
 		System.out.println("4." + h4);
 		Scanner sc = new Scanner(System.in);
-		if(sc.nextInt()==1) {
-			return h1;
-		}else {
-			return h2;
+		int choose=sc.nextInt();
+		switch(choose) {	
+			case 1: return h1;
+			case 2: return h2;
+			case 3: return h3;
+			default: return h4;
 		}
+
+	}
+	
+	public static void shop(Player p1, Item[] items) {
+		System.out.println("Vásárlás: ");
+		for (int i=0; i<items.length; i++) {
+			System.out.print(i+1+". ");
+			System.out.print(items[i]+"\n");
+		}
+		Scanner sc= new Scanner(System.in);
+		int szam=sc.nextInt();
+		if (szam>0 && szam<items.length+1 && p1.getGold()>items[szam-1].getGold())
+			p1.buy(items[szam-1]);
+		
 	}
 	
 
@@ -83,18 +103,27 @@ public class Main {
 		//EZ KELL
 		//Player p1 = new Player();
 		//setNameSetCast(p1);
-		
+		Item[] items = {new Item("ShotSword",50,20,0),
+						new Item("LongSword",50,20,0)
+						};
 		Player p1 = new Player("Magus","Berci"); //EZ MAJD DhpE
 		System.out.println(p1);
 		
 		for (int i=0; i<1; i++) {
 			if(p1.isAlive()==false) break;
 			fightTillTheEnd(p1,chooseHarcos(p1));
-			//System.out.println(p1);
+			System.out.println(p1);
+			shop(p1,items);
+			System.out.println(p1);
 		}
-		Boss b1 = new Boss();
-		System.out.println(b1);
-		fightTillTheEnd(p1,b1);
+		
+		
+		
+		
+		//BOSS FIGHT
+//		Boss b1 = new Boss();
+//		System.out.println(b1);
+//		fightTillTheEnd(p1,b1);
 		
 	}
 

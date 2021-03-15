@@ -13,6 +13,8 @@ public class Tank extends Harcos{
             this.maxDamage=2;
             this.hp=10;
             this.hitChance=80;
+            this.xp=30;
+            this.gold=30;
             break;
         case 2:
             this.level=2;
@@ -20,6 +22,8 @@ public class Tank extends Harcos{
             this.maxDamage=3;
             this.hp=12;
             this.hitChance=80;
+            this.xp=30;
+            this.gold=30;
             break;
         case 3:
             this.level=3;

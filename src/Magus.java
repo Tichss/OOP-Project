@@ -24,6 +24,7 @@ public class Magus extends Harcos{
             this.hp=8;
             this.hitChance=60;
             this.xp=30;
+            this.gold=30;
             break;
         case 2:
         	this.name=setName();
@@ -32,6 +33,8 @@ public class Magus extends Harcos{
             this.maxDamage=4;
             this.hp=10;
             this.hitChance=60;
+            this.xp=30;
+            this.gold=30;
             break;
         case 3:
         	this.name=setName();
