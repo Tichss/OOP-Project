@@ -26,9 +26,9 @@ public class Item {
 
 	public String toString() {
 		if (this.plusDamage>0)
-			return this.name +" +" + this.plusDamage+" sebzes Ár: " + this.gold;
+			return this.name +"\t +" + this.plusDamage+" sebzés \t Ár: " + this.gold +" gold";
 		else
-			return this.name +" +" + this.plusHp+" HP Ár: "+ this.gold;
+			return this.name +"\t +" + this.plusHp+" HP \t Ár: "+ this.gold +" gold";
 	}
 
 }

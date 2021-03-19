@@ -61,6 +61,10 @@ public class  Harcos { //Fõosztály
 		}
 	}
 	
+	//
+	
+
+	
 	
 	//toString
 	public String toString() {

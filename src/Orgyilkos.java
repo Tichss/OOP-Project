@@ -1,4 +1,12 @@
 public class Orgyilkos extends Harcos{
+	
+	static String[] names= {"Katarina", "Bayek", "Eivor", "Hitman", "Talon", "Zed", "Akali", "Kha Zhix", "Rengar"};
+	
+	//seged statcicek
+	static int volteNameCount=0; 
+	static String[] volteName = new String [names.length];
+	
+	protected String name;
 
     Orgyilkos(){}
     Orgyilkos(int level){
@@ -7,73 +15,117 @@ public class Orgyilkos extends Harcos{
 
         switch (level){
         case 1:
+        	this.name=setName();
             this.level=1;
-            this.minDamage=3;
-            this.maxDamage=5;
-            this.hp=6;
-            this.hitChance=50;
-            this.xp=30;
-            this.gold=30;
+            this.minDamage=50;
+            this.maxDamage=60;
+            this.hp=150;
+            this.hitChance=80;
+            this.xp=60;
+            this.gold=15;
             break;
         case 2:
+        	this.name=setName();
             this.level=2;
-            this.minDamage=4;
-            this.maxDamage=5;
-            this.hp=8;
-            this.hitChance=50;
-            this.xp=30;
+            this.minDamage=80;
+            this.maxDamage=90;
+            this.hp=230;
+            this.hitChance=80;
+            this.xp=70;
             this.gold=30;
             break;
         case 3:
+        	this.name=setName();
             this.level=3;
-            this.minDamage=4;
-            this.maxDamage=6;
-            this.hp=10;
-            this.hitChance=50;
+            this.minDamage=100;
+            this.maxDamage=120;
+            this.hp=310;
+            this.hitChance=80;
+            this.gold=40;
+            this.xp=80;
             break;
         case 4:
+        	this.name=setName();
             this.level=4;
-            this.minDamage=5;
-            this.maxDamage=6;
-            this.hp=12;
-            this.hitChance=50;
+            this.minDamage=130;
+            this.maxDamage=145;
+            this.hp=390;
+            this.hitChance=80;
+            this.gold=50;
+            this.xp=90;
             break;
         case 5:
+            this.name=setName();
             this.level=5;
-            this.minDamage=6;
-            this.maxDamage=8;
-            this.hp=15;
-            this.hitChance=50;
+            this.minDamage=160;
+            this.maxDamage=180;
+            this.hp=470;
+            this.hitChance=80;
+            this.gold=60;
+            this.xp=100;
             break;
         case 6:
+            this.name=setName();
             this.level=6;
-            this.minDamage=7;
-            this.maxDamage=8;
-            this.hp=17;
-            this.hitChance=50;
+            this.minDamage=200;
+            this.maxDamage=215;
+            this.hp=550;
+            this.hitChance=80;
+            this.gold=70;
+            this.xp=110;
             break;
         case 7:
+            this.name=setName();
             this.level=7;
-            this.minDamage=8;
-            this.maxDamage=10;
-            this.hp=20;
-            this.hitChance=50;
+            this.minDamage=220;
+            this.maxDamage=240;
+            this.hp=620;
+            this.hitChance=80;
+            this.gold=80;
+            this.xp=120;
             break;
         case 8:
+        	this.name=setName();
             this.level=8;
-            this.minDamage=8;
-            this.maxDamage=10;
-            this.hp=22;
-            this.hitChance=45;
+            this.minDamage=250;
+            this.maxDamage=265;
+            this.hp=710;
+            this.hitChance=80;
+            this.gold=95;
+            this.xp=130;
             break;
         case 9:
+        	this.name=setName();
             this.level=9;
-            this.minDamage=10;
-            this.maxDamage=10;
-            this.hp=25;
-            this.hitChance=45;
+            this.minDamage=290;
+            this.maxDamage=310;
+            this.hp=800;
+            this.hitChance=80;
+            this.gold=100;
+            this.xp=140;
             break;
-
         }
+        
     }
+    public String setName() {
+    	int rdmszam = (int)(Math.random() * (names.length));
+    	int newRdmszam;
+    	String name = names[rdmszam];
+    	for (int i=0; i<=volteNameCount; i++) {
+    		if (name==volteName[i]) {
+    			do {
+    				newRdmszam = (int)(Math.random() * (names.length));
+    			}while(rdmszam==newRdmszam);
+    			name = names[newRdmszam];
+    		}
+    	}
+    	volteName[volteNameCount]=name;
+    	volteNameCount++;
+    	return name;
+    }
+    
+    public String toString(){
+    	return super.toString() + " neve: "+ name;
+    }
+
 }

@@ -1,12 +1,14 @@
 
 public class Boss extends Harcos{
+	String name;
 
     Boss(){
-    		this.cast="Veigar";
+    		this.name="Veigar";
+    		this.cast="Sötét mágus";
             this.level=10;
-            this.minDamage=12;
-            this.maxDamage=15;
-            this.hp=50;
-            this.hitChance=100;
+            this.minDamage=300;
+            this.maxDamage=350;
+            this.hp=1500;
+            this.hitChance=75;
     }
 }
