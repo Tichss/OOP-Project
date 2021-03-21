@@ -11,7 +11,7 @@ public class Player extends Harcos{
 		this.name=name;
 		setCast(cast);
 		this.xp=0;
-		this.gold=4;
+		this.gold=50;
 	}
 	
 	

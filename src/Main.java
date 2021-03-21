@@ -112,6 +112,7 @@ public class Main {
 		//EZ KELL
 		//Player p1 = new Player();
 		//setNameSetCast(p1);
+		
 		Item[] items = {new Item("SmallMedKit",15,0,15),
 		                new Item("MediumMedKit",25,0,30),
 		                new Item("HardMedKit",40,0,50),
@@ -125,8 +126,10 @@ public class Main {
 		                new Item("EXcalibur",150,150,0)
 						};
 		
+		//EZ MAJD NEM KELL
+		Player p1 = new Player("Magus","Berci"); 
 		
-		Player p1 = new Player("Magus","Berci"); //EZ MAJD DhpE
+		
 		Harcos h1= null;
 
 		System.out.println(p1);
@@ -148,7 +151,6 @@ public class Main {
 			System.out.println(b1);
 			p1.fightTillTheEnd(b1);	
 		}
-		
 	}
 
 }
