@@ -92,7 +92,7 @@ public class Main {
 				int szam;
 				szam=sc1.nextInt();
 				if(szam>0 && szam<items.length+1) {
-					if (p1.getGold()>items[szam-1].getGold()) {
+					if (p1.getGold()>=items[szam-1].getGold()) {
 						System.out.println("Megvetted: "+items[szam-1].getName());
 						p1.buy(items[szam-1]);	
 					}else {

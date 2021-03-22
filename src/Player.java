@@ -5,13 +5,15 @@ public class Player extends Harcos{
 	private String name;
 	
 
-	Player(){}
-	Player(String cast, String name){	
-		
-		this.name=name;
-		setCast(cast);
+	Player(){
 		this.xp=0;
 		this.gold=50;
+	}
+	Player(String cast, String name){
+		
+		this();
+		this.name=name;
+		this.cast=cast;
 	}
 	
 	
@@ -33,21 +35,21 @@ public class Player extends Harcos{
         case "Tank":
             this.minDamage=25;
             this.maxDamage=35;
-            this.maxHp=180;
+            this.maxHp=200;
             this.hitChance=90;
             break;
             
         case "Magus":
             this.minDamage=30;
             this.maxDamage=40;
-            this.maxHp=140;
+            this.maxHp=170;
             this.hitChance=85;
             break;
 
         case "Orgyilkos":
             this.minDamage=40;
             this.maxDamage=50;
-            this.maxHp=100;
+            this.maxHp=130;
             this.hitChance=80;
             break;
         }
@@ -76,51 +78,51 @@ public class Player extends Harcos{
 		case "Tank":
 			switch(this.level) {
 			
-			case 2: this.minDamage=40;
-					this.maxDamage=50;
-					this.maxHp=250;
+			case 2: this.minDamage+=15;
+					this.maxDamage+=15;
+					this.maxHp+=50;
 					this.hitChance=90;
 					break;
 			
-			case 3: this.minDamage=50;
-					this.maxDamage=70;
-					this.maxHp=320;
+			case 3: this.minDamage+=10;
+					this.maxDamage+=20;
+					this.maxHp+=70;
 					this.hitChance=90;
 					break;
 			
-			case 4: this.minDamage=70;
-					this.maxDamage=80;
-					this.maxHp=400;
+			case 4: this.minDamage+=20;
+					this.maxDamage+=10;
+					this.maxHp+=80;
 					this.hitChance=90;
 					break;
 			
-			case 5: this.minDamage=80;
-					this.maxDamage=100;
-					this.maxHp=470;
+			case 5: this.minDamage+=10;
+					this.maxDamage+=20;
+					this.maxHp+=70;
 					this.hitChance=90;
 					break;
 			
-			case 6: this.minDamage=110;
-					this.maxDamage=120;
-					this.maxHp=550;
+			case 6: this.minDamage+=30;
+					this.maxDamage+=20;
+					this.maxHp+=80;
 					this.hitChance=90;
 					break;
 			
-			case 7: this.minDamage=120;
-					this.maxDamage=140;
-					this.maxHp=630;
+			case 7: this.minDamage+=10;
+					this.maxDamage+=20;
+					this.maxHp+=80;
 					this.hitChance=90;
 					break;
 			
-			case 8: this.minDamage=140;
-					this.maxDamage=160;
-					this.maxHp=750;
+			case 8: this.minDamage+=20;
+					this.maxDamage+=20;
+					this.maxHp+=120;
 					this.hitChance=90;
 					break;
 			
-			case 9: this.minDamage=160;
-					this.maxDamage=170;
-					this.maxHp=900;
+			case 9: this.minDamage+=20;
+					this.maxDamage+=10;
+					this.maxHp+=150;
 					this.hitChance=90;
 					break;
 			}
@@ -129,51 +131,51 @@ public class Player extends Harcos{
 		case "Magus":
 			switch(this.level) {
 			
-			case 2: this.minDamage=50;
-					this.maxDamage=60;
-					this.maxHp=220;
+			case 2: this.minDamage+=20;
+					this.maxDamage+=20;
+					this.maxHp+=40;
 					this.hitChance=85;
 					break;
 			
-			case 3: this.minDamage=70;
-					this.maxDamage=490;
-					this.maxHp=280;
+			case 3: this.minDamage+=20;
+					this.maxDamage+=30;
+					this.maxHp+=60;
 					this.hitChance=85;
 					break;
 			
-			case 4: this.minDamage=100;
-					this.maxDamage=120;
-					this.maxHp=350;
+			case 4: this.minDamage+=30;
+					this.maxDamage+=30;
+					this.maxHp+=70;
 					this.hitChance=85;
 					break;
 			
-			case 5: this.minDamage=120;
-					this.maxDamage=140;
-					this.maxHp=430;
+			case 5: this.minDamage+=20;
+					this.maxDamage+=20;
+					this.maxHp+=80;
 					this.hitChance=85;
 					break;
 			
-			case 6: this.minDamage=140;
-					this.maxDamage=160;
-					this.maxHp=490;
+			case 6: this.minDamage+=20;
+					this.maxDamage+=20;
+					this.maxHp+=60;
 					this.hitChance=85;
 					break;
 			
-			case 7: this.minDamage=160;
-					this.maxDamage=180;
-					this.maxHp=550;
+			case 7: this.minDamage+=20;
+					this.maxDamage+=20;
+					this.maxHp+=70;
 					this.hitChance=85;
 					break;
 			
-			case 8: this.minDamage=180;
-					this.maxDamage=200;
-					this.maxHp=630;
+			case 8: this.minDamage+=20;
+					this.maxDamage+=20;
+					this.maxHp+=90;
 					this.hitChance=85;
 					break;
 			
 			case 9: this.minDamage=200;
 					this.maxDamage=220;
-					this.maxHp=700;
+					this.maxHp+=80;
 					this.hitChance=85;
 					break;
 			}
@@ -182,51 +184,51 @@ public class Player extends Harcos{
 		case "Orgyilkos":
 			switch(this.level) {
 			
-			case 2: this.minDamage=60;
-					this.maxDamage=70;
-					this.maxHp=150;
+			case 2: this.minDamage+=20;
+					this.maxDamage+=20;
+					this.maxHp+=30;
 					this.hitChance=80;
 					break;
 			
-			case 3: this.minDamage=70;
-					this.maxDamage=90;
-					this.maxHp=200;
+			case 3: this.minDamage+=10;
+					this.maxDamage+=20;
+					this.maxHp+=40;
 					this.hitChance=80;
 					break;
 			
-			case 4: this.minDamage=100;
-					this.maxDamage=130;
-					this.maxHp=250;
+			case 4: this.minDamage+=30;
+					this.maxDamage+=40;
+					this.maxHp+=50;
 					this.hitChance=85;
 					break;
 			
-			case 5: this.minDamage=140;
-					this.maxDamage=160;
-					this.maxHp=300;
+			case 5: this.minDamage+=40;
+					this.maxDamage+=30;
+					this.maxHp+=50;
 					this.hitChance=80;
 					break;
 			
-			case 6: this.minDamage=170;
-					this.maxDamage=190;
-					this.maxHp=350;
+			case 6: this.minDamage+=30;
+					this.maxDamage+=30;
+					this.maxHp+=50;
 					this.hitChance=80;
 					break;
 			
-			case 7: this.minDamage=220;
-					this.maxDamage=240;
-					this.maxHp=400;
+			case 7: this.minDamage+=50;
+					this.maxDamage+=50;
+					this.maxHp+=50;
 					this.hitChance=80;
 					break;
 			
-			case 8: this.minDamage=240;
-					this.maxDamage=260;
-					this.maxHp=475;
+			case 8: this.minDamage+=20;
+					this.maxDamage+=20;
+					this.maxHp+=75;
 					this.hitChance=85;
 					break;
 			
-			case 9: this.minDamage=260;
-					this.maxDamage=270;
-					this.maxHp=550;
+			case 9: this.minDamage+=20;
+					this.maxDamage+=20;
+					this.maxHp+=75;
 					this.hitChance=80;
 					break;
 			}
