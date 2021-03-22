@@ -6,14 +6,17 @@ public class Player extends Harcos{
 	
 
 	Player(){
+		this.level=1;
 		this.xp=0;
 		this.gold=50;
 	}
 	Player(String cast, String name){
 		
 		this();
-		this.name=name;
 		this.cast=cast;
+		this.name=name;
+		levelUP();
+		regen();
 	}
 	
 	
@@ -26,38 +29,7 @@ public class Player extends Harcos{
 	public void setName(String name) {this.name = name;}
 	
 	public String getCast() {return cast;}
-	public void setCast(String cast) {
-		
-		this.cast = cast;
-		this.level=1;
-        switch (cast){
-        
-        case "Tank":
-            this.minDamage=25;
-            this.maxDamage=35;
-            this.maxHp=200;
-            this.hitChance=90;
-            break;
-            
-        case "Magus":
-            this.minDamage=30;
-            this.maxDamage=40;
-            this.maxHp=170;
-            this.hitChance=85;
-            break;
-
-        case "Orgyilkos":
-            this.minDamage=40;
-            this.maxDamage=50;
-            this.maxHp=130;
-            this.hitChance=80;
-            break;
-        }
-        
-        this.hp=this.maxHp;
-		
-	}
-	
+	public void setCast(String cast) {this.level=1;}
 	
 	public int getXp() {return xp;}
 	public void setXp(int xp) {this.xp = xp;}
@@ -69,14 +41,18 @@ public class Player extends Harcos{
 	
 	//OTHER METHODS
 	
-	public void regen() {
-		this.hp=this.maxHp;
-	}
+	public void regen() {this.hp=this.maxHp;}
 	
 	public void levelUP() {
 		switch(this.cast) {
 		case "Tank":
 			switch(this.level) {
+			
+			case 1: this.minDamage=25;
+		            this.maxDamage=35;
+		            this.maxHp=200;
+		            this.hitChance=90;
+		            break;
 			
 			case 2: this.minDamage+=15;
 					this.maxDamage+=15;
@@ -131,6 +107,12 @@ public class Player extends Harcos{
 		case "Magus":
 			switch(this.level) {
 			
+			case 1: this.minDamage=30;
+		            this.maxDamage=40;
+		            this.maxHp=170;
+		            this.hitChance=85;
+		            break;
+			
 			case 2: this.minDamage+=20;
 					this.maxDamage+=20;
 					this.maxHp+=40;
@@ -183,6 +165,12 @@ public class Player extends Harcos{
 			
 		case "Orgyilkos":
 			switch(this.level) {
+			
+			case 1: this.minDamage=40;
+		            this.maxDamage=50;
+		            this.maxHp=130;
+		            this.hitChance=80;
+		            break;
 			
 			case 2: this.minDamage+=20;
 					this.maxDamage+=20;
@@ -239,14 +227,13 @@ public class Player extends Harcos{
 	@Override
 	public void setLevel(int xp){
 		if (this.xp>=760) level = 9;
-		else if(this.xp>620) level=8;
-		else if(this.xp>=500) level=7;
-		else if(this.xp>=400) level=6;
-		else if(this.xp>=310) level=5;
-		else if(this.xp>=220) level=4;
-		else if(this.xp>=130) level=3;
-		else if(this.xp>=60) level=2;
-		
+		else if(this.xp>620)  {level=8; levelUP();}
+		else if(this.xp>=500) {level=7; levelUP();}
+		else if(this.xp>=400) {level=6; levelUP();}
+		else if(this.xp>=310) {level=5; levelUP();}
+		else if(this.xp>=220) {level=4; levelUP();}
+		else if(this.xp>=130) {level=3; levelUP();}
+		else if(this.xp>=60)  {level=2; levelUP();}
 	}
 	
 	public void fightTillTheEnd(Harcos h1) {
@@ -263,16 +250,15 @@ public class Player extends Harcos{
 			}while(this.isAlive() && h1.isAlive());
 		}
 		
-		if(this.isAlive()) {
-			this.setGold(this.getGold()+h1.getGold());
-			this.setXp(this.getXp()+h1.getXp());
-			this.setLevel(this.getXp());
-			this.levelUP();
+		if(super.isAlive()) {
+			this.gold += h1.getGold();
+			this.xp += h1.getXp();
+			this.setLevel(this.xp); //mindképp this.setlevel
 			this.regen();
 			System.out.println("Gyõztél");
 		}else {
 			System.out.println("Vesztettél");
-			System.out.println("Ennyit sikerült összeszedni: " +this.getXp());
+			System.out.println("Ennyit sikerült összeszedni: " + this.xp);
 		}
 	}
 	
@@ -280,7 +266,7 @@ public class Player extends Harcos{
 		this.gold-=i1.getGold();
 		this.minDamage+=i1.getPlusDamage();
 		this.maxDamage+=i1.getPlusDamage();
-		this.hp+=i1.getPlusHp();
+		this.maxHp+=i1.getPlusHp();
 	}
 	
 	public String toString() {

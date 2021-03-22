@@ -79,9 +79,9 @@ public class Main {
 			System.out.println("Szeretnél (még) vásárolni? (Y/N)\nJelenlegi vagyonod: "+p1.getGold() +" gold");
 			do {
 				yesOrNo=sc.next().charAt(0); 
-			}while(yesOrNo!='Y' && yesOrNo!='N');
+			}while(!(yesOrNo=='y' || yesOrNo=='n' || yesOrNo=='Y' || yesOrNo=='N'));
 			
-			if(yesOrNo=='Y') {
+			if(yesOrNo=='y' || yesOrNo=='Y' ) {
 				System.out.println("A megvehetõ tárgyak listája: ");
 				for (int i=0; i<items.length; i++) {
 					
@@ -102,7 +102,7 @@ public class Main {
 					System.out.println("Nincs ilyen item...");
 				}
 			}	
-		}while(yesOrNo!='N');
+		}while(yesOrNo!='N' && yesOrNo!='n');
 }
 	
 
@@ -127,7 +127,7 @@ public class Main {
 						};
 		
 		//EZ MAJD NEM KELL
-		Player p1 = new Player("Magus","Berci"); 
+		Player p1 = new Player("Orgyilkos","Berci"); 
 		
 		
 		Harcos h1= null;
