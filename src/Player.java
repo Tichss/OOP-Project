@@ -9,6 +9,7 @@ public class Player extends Harcos{
 		this.level=1;
 		this.xp=0;
 		this.gold=50;
+
 	}
 	Player(String cast, String name){
 		
@@ -29,7 +30,7 @@ public class Player extends Harcos{
 	public void setName(String name) {this.name = name;}
 	
 	public String getCast() {return cast;}
-	public void setCast(String cast) {this.level=1;}
+	public void setCast(String cast) {this.cast=cast;}
 	
 	public int getXp() {return xp;}
 	public void setXp(int xp) {this.xp = xp;}

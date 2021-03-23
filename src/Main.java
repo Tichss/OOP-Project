@@ -8,20 +8,22 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		p1.setName(sc.nextLine());
 		System.out.println("Válassz castot: 1-Tank 2-Mágus 3-Orgyilkos");
-		int cast=sc.nextInt();
-		while(cast<1 || cast>4){
+		char cast;
+		do {
 			System.out.println("1-2-3 Közül Válaszz!");
-			cast=sc.nextInt();
+			cast=sc.next().charAt(0);
 		}
-		if(cast==1) {
+		while(cast!='1' && cast!='2' && cast!='3');
+		p1.setLevel(1);	
+		if(cast=='1') {
 			p1.setCast("Tank");	
-		} else if(cast==2){
-			p1.setCast("Magus");	
+		} else if(cast=='2'){
+			p1.setCast("Magus");
 		} else {
 			p1.setCast("Orgyilkos");
 		}
-		
-
+		p1.levelUP();
+		p1.regen();
 	}
 	
 	
@@ -109,9 +111,9 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		//EZ KELL
-		//Player p1 = new Player();
-		//setNameSetCast(p1);
+//		EZ KELL
+		Player p1 = new Player();
+		setNameSetCast(p1);
 		
 		Item[] items = {new Item("SmallMedKit",15,0,15),
 		                new Item("MediumMedKit",25,0,30),
@@ -127,7 +129,7 @@ public class Main {
 						};
 		
 		//EZ MAJD NEM KELL
-		Player p1 = new Player("Orgyilkos","Berci"); 
+//		Player p1 = new Player("Orgyilkos","Berci"); 
 		
 		
 		Harcos h1= null;
