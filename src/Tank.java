@@ -1,7 +1,7 @@
 
 public class Tank extends Harcos{
 	
-	static String[] names= {"Spartacus", "Kratos", "Conor McGregor", "Khabib Nurmagomedow", "Bruce Wayne", "Doom Guy", "Hulk", "Thanos", "Ríviai Gerald"};
+	static String[] names= {"Spartacus", "Kratos", "Conor McGregor", "Khabib Nurmagomedow", "Bruce Wayne", "Doom Guy", "Hulk", "Thanos", "Ríviai Gerald", "Fugrog", "Wesmohr", "Alezmalog", "Vedius", "Zutor", "Zemalog", "Kaxfur", "Ikaos", "Xiog", "Telwor", "Zlelog", "Slemvog", "Bogsal", "Ninar", "Zekrus", "Klobos", "Wemrus", "Rawar", "Vrumtag"};
 	
 	//seged statcicek
 	static int volteNameCount=0; 
@@ -23,7 +23,7 @@ public class Tank extends Harcos{
             this.hp=225;
             this.hitChance=90;
             this.xp=50;
-            this.gold=5;
+            this.gold=10;
             break;
         case 2:
         	this.name=setName();
@@ -33,7 +33,7 @@ public class Tank extends Harcos{
             this.hp=350;
             this.hitChance=90;
             this.xp=60;
-            this.gold=10;
+            this.gold=15;
             break;
         case 3:
         	this.name=setName();
@@ -43,7 +43,7 @@ public class Tank extends Harcos{
             this.hp=470;
             this.hitChance=90;
             this.xp=60;
-            this.gold=20;      
+            this.gold=25;      
             break;
         case 4:
         	this.name=setName();
@@ -52,7 +52,7 @@ public class Tank extends Harcos{
             this.maxDamage=100;
             this.hp=590;
             this.hitChance=90;
-            this.gold=25;
+            this.gold=35;
             this.xp=70;
             break;
         case 5:
@@ -62,7 +62,7 @@ public class Tank extends Harcos{
             this.maxDamage=120;
             this.hp=710;
             this.hitChance=90;
-            this.gold=30;
+            this.gold=40;
             this.xp=80;
             break;
        
@@ -74,7 +74,7 @@ public class Tank extends Harcos{
             this.hp=830;
             this.hitChance=90;
             this.xp=90;
-            this.gold=40;
+            this.gold=45;
             break;
         case 7:
         	this.name=setName();
@@ -94,7 +94,7 @@ public class Tank extends Harcos{
             this.hp=1070;
             this.hitChance=90;
             this.xp=110;
-            this.gold=60;
+            this.gold=55;
             break; 
        case 9:
     	    this.name=setName();
@@ -103,7 +103,7 @@ public class Tank extends Harcos{
             this.maxDamage=210;
             this.hp=1200;
             this.hitChance=90;
-            this.gold=70;
+            this.gold=65;
             this.xp=110;
             break;
         }

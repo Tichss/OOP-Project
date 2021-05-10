@@ -1,6 +1,6 @@
 public class Magus extends Harcos{
 	
-	static String[] names= {"Harry Potter", "Voldemort", "Gandalf", "Medivh", "Khadgar", "Scarlet Witch", "Demona", "Goethius Salmander", "Gellert Grindelwald"};
+	static String[] names= {"Harry Potter", "Voldemort", "Gandalf", "Medivh", "Khadgar", "Scarlet Witch", "Demona", "Goethius Salmander", "Gellert Grindelwald", "Warlock", "Mystiques", "Mystics", "Arcani", "Magius", "Auroras", "Illusionary", "Druids", "Occultists", "Obi", "Hocus", "Divina", "Sages", "Runi", "Ardor", "Vasati Fentumal", "Sillavana Helenelis", "Ailre Helenorin"};
 	
 	//seged statcicek
 	static int volteNameCount=0; 
@@ -23,7 +23,7 @@ public class Magus extends Harcos{
             this.maxDamage=50;
             this.hp=175;
             this.hitChance=85;
-            this.gold=10;
+            this.gold=20;
             this.xp=60;
             break;
         case 2:
@@ -33,7 +33,7 @@ public class Magus extends Harcos{
             this.maxDamage=80;
             this.hp=270;
             this.hitChance=85;
-            this.gold=20;
+            this.gold=30;
             this.xp=60;
             break;
         case 3:
@@ -43,7 +43,7 @@ public class Magus extends Harcos{
             this.maxDamage=100;
             this.hp=360;
             this.hitChance=85;
-            this.gold=30;
+            this.gold=40;
             this.xp=70;
             break;
         case 4:
@@ -53,7 +53,7 @@ public class Magus extends Harcos{
             this.maxDamage=140;
             this.hp=460;
             this.hitChance=85;
-            this.gold=45;
+            this.gold=50;
             this.xp=70;
             break;
         case 5:
@@ -63,7 +63,7 @@ public class Magus extends Harcos{
             this.maxDamage=160;
             this.hp=550;
             this.hitChance=85;
-            this.gold=50;
+            this.gold=60;
             this.xp=80;
             break;
         case 6:
@@ -73,7 +73,7 @@ public class Magus extends Harcos{
             this.maxDamage=180;
             this.hp=640;
             this.hitChance=85;
-            this.gold=60;
+            this.gold=70;
             this.xp=90;
             break;
         case 7:
@@ -83,7 +83,7 @@ public class Magus extends Harcos{
             this.maxDamage=200;
             this.hp=750;
             this.hitChance=85;
-            this.gold=70;
+            this.gold=80;
             this.xp=100;
             break;
         case 8:
@@ -93,7 +93,7 @@ public class Magus extends Harcos{
             this.maxDamage=220;
             this.hp=840;
             this.hitChance=85;
-            this.gold=75;
+            this.gold=85;
             this.xp=120;
             break;
         case 9:
@@ -103,7 +103,7 @@ public class Magus extends Harcos{
             this.maxDamage=260;
             this.hp=950;
             this.hitChance=85;
-            this.gold=80;
+            this.gold=90;
             this.xp=130;
             break;
         }

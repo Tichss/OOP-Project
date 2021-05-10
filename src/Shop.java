@@ -5,17 +5,17 @@ public class Shop {
 	
 	Shop(){
 		int i=0;
-		items[i]=	new Item("SmallMedKit",15,0,15);
-		items[i++]=	new Item("MediumMedKit",25,0,30);
-		items[i++]=	new Item("HardMedKit",40,0,50);
-		items[i++]=	new Item("HpOverPower",70,0,120);
-		items[i++]=	new Item("DudeThatsHP",130,0,250);
+		items[i]=	new Item("Life Crystal",15,0,15);
+		items[i++]=	new Item("Bloody Armor",25,0,30);
+		items[i++]=	new Item("Giant Helmet",40,0,50);
+		items[i++]=	new Item("Hero's Health",70,0,120);
+		items[i++]=	new Item("The God's Hands",130,0,250);
 				
-		items[i++]=	new Item("KisKard",15,5,0);
-		items[i++]=	new Item("Landzsa",30,15,0);
-		items[i++]=	new Item("Baltácska",55,30,0);
-		items[i++]=	new Item("Baltaa",100,70,0);
-		items[i++]=	new Item("EXcalibur",150,150,0);
+		items[i++]=	new Item("Small Knife",15,5,0);
+		items[i++]=	new Item("Shadow Staff",30,15,0);
+		items[i++]=	new Item("Curse Spellbook",55,30,0);
+		items[i++]=	new Item("Spear of Fate",100,70,0);
+		items[i++]=	new Item("The Devil's Trident",150,150,0);
 		;
 		
 	}

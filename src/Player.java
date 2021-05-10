@@ -8,7 +8,7 @@ public class Player extends Harcos{
 	Player(){
 		this.level=1;
 		this.xp=0;
-		this.gold=50;
+		this.gold=65;
 
 	}
 	Player(String cast, String name){
@@ -167,21 +167,21 @@ public class Player extends Harcos{
 		case "Orgyilkos":
 			switch(this.level) {
 			
-			case 1: this.minDamage=40;
-		            this.maxDamage=50;
-		            this.maxHp=130;
+			case 1: this.minDamage=50;
+		            this.maxDamage=60;
+		            this.maxHp=140;
 		            this.hitChance=80;
 		            break;
 			
-			case 2: this.minDamage+=20;
-					this.maxDamage+=20;
-					this.maxHp+=30;
+			case 2: this.minDamage+=25;
+					this.maxDamage+=25;
+					this.maxHp+=40;
 					this.hitChance=80;
 					break;
 			
-			case 3: this.minDamage+=10;
-					this.maxDamage+=20;
-					this.maxHp+=40;
+			case 3: this.minDamage+=15;
+					this.maxDamage+=25;
+					this.maxHp+=45;
 					this.hitChance=80;
 					break;
 			

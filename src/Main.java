@@ -115,17 +115,17 @@ public class Main {
 		Player p1 = new Player();
 		setNameSetCast(p1);
 		
-		Item[] items = {new Item("SmallMedKit",15,0,15),
-		                new Item("MediumMedKit",25,0,30),
-		                new Item("HardMedKit",40,0,50),
-		                new Item("HpOverPower",70,0,120),
-		                new Item("DudeThatsHP",130,0,250),
+		Item[] items = {new Item("Life Crystal		",15,0,15),
+		                new Item("Bloody Armor		",25,0,30),
+		                new Item("Giant Helmet		",40,0,50),
+		                new Item("Hero's Health	",70,0,120),
+		                new Item("The God's Hands	",130,0,250),
 		
-		                new Item("KisKard",15,5,0),
-		                new Item("Landzsa",30,15,0),
-		                new Item("Baltácska",55,30,0),
-		                new Item("Baltaa",100,70,0),
-		                new Item("EXcalibur",150,150,0)
+		                new Item("Small Knife		",15,5,0),
+		                new Item("Shadow Staff		",30,15,0),
+		                new Item("Curse Spellbook	",55,30,0),
+		                new Item("Spear of Fate	",100,70,0),
+		                new Item("The Devil's Trident	",150,150,0)
 						};
 		
 		//EZ MAJD NEM KELL

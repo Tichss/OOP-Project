@@ -1,6 +1,6 @@
 public class Orgyilkos extends Harcos{
 	
-	static String[] names= {"Katarina", "Bayek", "Eivor", "Hitman", "Talon", "Zed", "Akali", "Kha Zhix", "Rengar"};
+	static String[] names= {"Katarina", "Bayek", "Eivor", "Hitman", "Talon", "Zed", "Akali", "Kha Zhix", "Rengar", "Phantomblade", "Deadcrash", "Silentstrikes", "Lightningtooth", "Quickflow", "Deatheyes", "Ghost Eye", "Ghostshade", "Goldenstrikes", "Scarletbeat", "The Deadly Blaze", "The Quick Snake", "Thunder Moon", "The Masked Mark", "The Swift Snow", "Dead Bang", "The Blue Serpent", "The Ghost Assassin", "The Veiled Spider"};
 	
 	//seged statcicek
 	static int volteNameCount=0; 
@@ -22,7 +22,7 @@ public class Orgyilkos extends Harcos{
             this.hp=150;
             this.hitChance=80;
             this.xp=60;
-            this.gold=15;
+            this.gold=25;
             break;
         case 2:
         	this.name=setName();
@@ -32,7 +32,7 @@ public class Orgyilkos extends Harcos{
             this.hp=230;
             this.hitChance=80;
             this.xp=70;
-            this.gold=30;
+            this.gold=35;
             break;
         case 3:
         	this.name=setName();
@@ -41,7 +41,7 @@ public class Orgyilkos extends Harcos{
             this.maxDamage=120;
             this.hp=310;
             this.hitChance=80;
-            this.gold=40;
+            this.gold=50;
             this.xp=80;
             break;
         case 4:
@@ -51,7 +51,7 @@ public class Orgyilkos extends Harcos{
             this.maxDamage=145;
             this.hp=390;
             this.hitChance=80;
-            this.gold=50;
+            this.gold=65;
             this.xp=90;
             break;
         case 5:
@@ -61,7 +61,7 @@ public class Orgyilkos extends Harcos{
             this.maxDamage=180;
             this.hp=470;
             this.hitChance=80;
-            this.gold=60;
+            this.gold=75;
             this.xp=100;
             break;
         case 6:
@@ -71,7 +71,7 @@ public class Orgyilkos extends Harcos{
             this.maxDamage=215;
             this.hp=550;
             this.hitChance=80;
-            this.gold=70;
+            this.gold=85;
             this.xp=110;
             break;
         case 7:
@@ -81,7 +81,7 @@ public class Orgyilkos extends Harcos{
             this.maxDamage=240;
             this.hp=620;
             this.hitChance=80;
-            this.gold=80;
+            this.gold=95;
             this.xp=120;
             break;
         case 8:
@@ -91,7 +91,7 @@ public class Orgyilkos extends Harcos{
             this.maxDamage=265;
             this.hp=710;
             this.hitChance=80;
-            this.gold=95;
+            this.gold=100;
             this.xp=130;
             break;
         case 9:
@@ -101,7 +101,7 @@ public class Orgyilkos extends Harcos{
             this.maxDamage=310;
             this.hp=800;
             this.hitChance=80;
-            this.gold=100;
+            this.gold=110;
             this.xp=140;
             break;
         }
